@@ -12,9 +12,6 @@ module.exports = (req, res) => {
         });
 
     } else {
-        res.status(401).send("Wrong Password")
+        res.status(401).send("Wrong Password");
     }
-
-    console.log(req.body);
-    res.send('Hello World!!!');
 }
