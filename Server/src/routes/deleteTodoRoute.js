@@ -2,9 +2,9 @@ const TodoModel = require('../models/TodoModel');
 
 module.exports = async (req, res) => {
     const {id} = req.params;
-    const todo_item = await TodoModel.findById(id);
+    const todo = await TodoModel.findById(id);
     
-    await todo_item.deleteOne();
+    await todo.deleteOne();
 
-    res.status(204).json(todo_item);
+    res.status(204).json(todo);
 }
