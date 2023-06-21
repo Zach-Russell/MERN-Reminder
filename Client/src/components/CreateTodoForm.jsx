@@ -25,18 +25,37 @@ export const CreateTodoForm = () => {
 
 
     return (
-        <form onSubmit= {(e) => {
+        <form
+          onSubmit={(e) => {
             e.preventDefault();
             if (!text) return;
             createTodo({
-                text,
+              text,
             });
             setText('');
-        }}>
-            <input onChange= {e => setText(e.target.value)} 
-            value= {text}
-            type= "text" />
-            <button>Create</button>
+          }}
+        >
+          <input
+            onChange={(e) => setText(e.target.value)}
+            value={text}
+            type="text"
+            style={{
+              padding: '8px',
+              marginRight: '6px',
+            }}
+          />
+          <button
+            style={{
+              padding: '5px',
+              height: '35px',
+              outline: 'none',
+              border: 'none',
+              color: 'white',
+              backgroundColor: '#00c348',
+            }}
+          >
+            Create
+          </button>
         </form>
-    )
-}
+      );
+    };

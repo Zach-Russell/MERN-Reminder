@@ -14,8 +14,8 @@ export const TodoPage = () => {
     readTodosRequest(token)
   );
   return (
-    <div>
-      <h1>MERN TODO APP</h1>
+    <div className='my__todos'>
+      <h1>MY TODOS</h1>
       {isLoading ? (
         <ClipLoader size={150} />
       ) : (
